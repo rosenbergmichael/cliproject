@@ -1,9 +1,11 @@
-#!/usr/bin/env ruby   
+#!/usr/bin/env ruby    
 
- #look at medium article to get this to work
+require_relative '../lib/cli.rb'
 
-require_relative '../config/environment.rb'
+#API.new.get_api
 
-API.new.get_api
+CLI.new.welcome_menu
 
-CLI.new.user
+#usually one method, kick it off and get it going, can also move line 5 api.new ...can go inside initialize method (cli.new)
+#will call it, or top of CLI user instance method 
+ 

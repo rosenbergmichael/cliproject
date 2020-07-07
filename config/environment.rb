@@ -3,8 +3,7 @@ require 'httparty'
 require 'json'
 require 'pry'
 
-require '../lib/cli.rb'
-require '../lib/api.rb'
-require '../lib/videos.rb'
+require_relative '../lib/cli.rb'
+require_relative '../lib/api.rb'
+require_relative '../lib/videos.rb'
 
-#where requires will be placed
