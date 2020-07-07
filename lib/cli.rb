@@ -1,7 +1,16 @@
 #everything user sees, also what's talking to primariy class 
+#provide user interface
+#'gets' and 'puts' user input
 
 class CLI
 
+    attr_reader :api
+
+    def initialize
+        @api = API.new 
+    end
+    
+    
     def welcome_menu
         system("clear")
         greeting
@@ -31,7 +40,7 @@ class CLI
         1. Videos by Country
         2. Videos by League
         3. Videos by Team
-            Enter exit to leave program.
+            Enter 'exit' to leave program.
         DOC
     end
 

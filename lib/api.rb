@@ -1,3 +1,5 @@
+#get data from internet w/ hitting api or scraping
+
 class API 
 
     def get_api 
@@ -9,5 +11,3 @@ class API
 
     end 
 end
-
-

@@ -1,11 +1,20 @@
 #!/usr/bin/env ruby    
 
-require_relative '../lib/cli.rb'
+require_relative "../config/environment"
 
-#API.new.get_api
+new_cli_instance = CLI.new
+new_cli_instance.welcome_menu
 
-CLI.new.welcome_menu
 
-#usually one method, kick it off and get it going, can also move line 5 api.new ...can go inside initialize method (cli.new)
+
+
+
+#3 lines of code: 
+#shebang line (tells interpreter to use ruby)
+#require your environmnet 
+#start your program
+
+
+#usually one method, kick it off and get it going
 #will call it, or top of CLI user instance method 
  
