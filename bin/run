@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby   
+
+ #look at medium article to get this to work
+
+require_relative '../config/environment.rb'
+
+API.new.get_api
+
+CLI.new.user
