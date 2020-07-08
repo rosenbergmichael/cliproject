@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby    
 
-require_relative "../config/environment"
+require_relative '../config/environment'
 
 new_cli_instance = CLI.new
 new_cli_instance.welcome_menu
@@ -9,12 +9,11 @@ new_cli_instance.welcome_menu
 
 
 
-#3 lines of code: 
+#3/4 lines of code: 
 #shebang line (tells interpreter to use ruby)
 #require your environmnet 
 #start your program
 
-
 #usually one method, kick it off and get it going
-#will call it, or top of CLI user instance method 
+ 
  

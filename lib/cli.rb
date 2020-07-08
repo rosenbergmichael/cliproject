@@ -1,6 +1,5 @@
 #everything user sees, also what's talking to primariy class 
-#provide user interface
-#'gets' and 'puts' user input
+#provide user interface, 'gets' and 'puts' user input
 
 class CLI
 
@@ -8,6 +7,7 @@ class CLI
 
     def initialize
         @api = API.new 
+        api.get_api 
     end
     
     
@@ -17,6 +17,7 @@ class CLI
             while menu != "exit"
             end    
         end_program
+        binding.pry
     end
 
     def greeting
@@ -28,7 +29,7 @@ class CLI
     end
 
     def menu 
-        puts "Please choose one of the following options: "
+        puts "Please choose one of the following number options: "
         list_options
         input = gets.strip.downcase
         choose_option(input)
@@ -37,9 +38,9 @@ class CLI
 
     def list_options
         puts <<-DOC.gsub /^\s*/, ''
-        1. Videos by Country
-        2. Videos by League
-        3. Videos by Team
+        1. Premier League Videos (England)
+        2. La Liga Videos (Spain)
+        3. Serie A Videos (Italy)
             Enter 'exit' to leave program.
         DOC
     end
@@ -47,35 +48,25 @@ class CLI
     def choose_option(input)
         case input 
         when "1"    
-            puts "number 1 chosen"
+            puts "Premier League Videos"
         when "2"    
-            puts "number 2 chosen"
+            puts "La Liga Videos"
+        when "3"
+             puts "Serie A Videos"    
         end
+        #is this where I would put the videos.rb methods england_videos, spain_videos?
+        #so Videos.england_videos for "1" ?
+        #should return new list per country, with title (Arsenal-Wolves) and link to video
     end
 
 
 end
 
 
-
-# puts "Please enter a number 1-x to see available teams for that country"
-# puts "1. England"
-# puts "2. Italy"
-# puts "3. xxx"
-# puts "4. xxx"
-# puts "Enter Q to exit"
+#another menu 
 
 
-    # def country_menu
-    #     puts "Please enter a number 1-x to see available highlight videos for that team"
-    #     puts "1. Arsenal"
-    #     puts "2. Manchester City"
-    #     puts "3. xxx"
-    #     puts "4. xxx"
-    #     puts "Enter B to go back"
-    #     puts "Enter Q to exit"
 
-    # end
-
+  
     
     
