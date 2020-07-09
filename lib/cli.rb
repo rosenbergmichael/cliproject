@@ -1,5 +1,3 @@
-#everything user sees, also what's talking to primariy class 
-#provide user interface, 'gets' and 'puts' user input
 require 'pry'
 
 class CLI
@@ -18,16 +16,18 @@ class CLI
             while menu != "exit"
             end    
         end_program
-      #  binding.pry
     end
+
 
     def greeting
         puts "Welcome to World Soccer Video Highlights!"
     end
 
+
     def end_program
         puts "Thanks for stopping by, come back soon!"
     end
+
 
     def menu 
         puts ""
@@ -39,6 +39,7 @@ class CLI
         return input 
     end
 
+
     def list_options
         puts <<-DOC.gsub /^\s*/, ''
         1. Premier League Videos (England)
@@ -47,20 +48,29 @@ class CLI
         DOC
         puts ""
         puts "Enter 'exit' to leave program."
-        
     end
+
 
     def choose_option(input)
         case input 
-        when "1"    
+        when "1"   
+            puts "" 
+            puts "Click a link to watch that game's highlights!  Or enter 1-3 to view a different league."
+            puts ""
             Videos.show_england_videos 
         when "2"   
+            puts "" 
+            puts "Click a link to watch that game's highlights!  Or enter 1-3 to view a different league."
+            puts ""
             Videos.show_spain_videos 
         when "3"
+            puts "" 
+            puts "Click a link to watch that game's highlights!  Or enter 1-3 to view a different league."
+            puts ""
             Videos.show_italy_videos    
         end
     end
-    
+
 
 end
 
