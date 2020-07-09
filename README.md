@@ -1,9 +1,4 @@
-# Name
-
-World Soccer Video Highlights
-
-
-## Description
+# World Soccer Video Highlights 
 
 This program is for soccer/football/futbol lovers like myself, allowing users to watch match/goal highlights from some of the best leagues around the world via Scorebat's API.  Videos are sorted by the top 3 European leagues.  After choosing which league's matches you'd like to view, simply click on the link of the corresponding match and enjoy!
 
