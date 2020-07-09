@@ -55,17 +55,17 @@ class CLI
         case input 
         when "1"   
             puts "" 
-            puts "Click a link to watch that game's highlights!  Or enter 1-3 to view a different league."
+            puts "Click a link to watch that game's highlights!  Or enter a number 1-3 to view a different league."
             puts ""
             Videos.show_england_videos 
         when "2"   
             puts "" 
-            puts "Click a link to watch that game's highlights!  Or enter 1-3 to view a different league."
+            puts "Click a link to watch that game's highlights!  Or enter a number 1-3 to view a different league."
             puts ""
             Videos.show_spain_videos 
         when "3"
             puts "" 
-            puts "Click a link to watch that game's highlights!  Or enter 1-3 to view a different league."
+            puts "Click a link to watch that game's highlights!  Or enter a number 1-3 to view a different league."
             puts ""
             Videos.show_italy_videos    
         end
