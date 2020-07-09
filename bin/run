@@ -9,11 +9,6 @@ new_cli_instance.welcome_menu
 
 
 
-#3/4 lines of code: 
-#shebang line (tells interpreter to use ruby)
-#require your environmnet 
-#start your program
 
-#usually one method, kick it off and get it going
  
  
