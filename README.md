@@ -1,21 +1,26 @@
-##NAME
+# Name
 
 World Soccer Video Highlights
 
 
-##DESCRIPTION
+## Description
 
-This program is for soccer/football/futbol lovers like myself, allowing users to watch match/goal highlights from some of the best leagues around the world.  Videos are sorted by the top 3 European leagues.  After choosing which league's matches you'd like to view, simply click on the link of the corresponding match and enjoy!
-
-
-#INSTALL INSTRUCTIONS
-
-Abcde
+This program is for soccer/football/futbol lovers like myself, allowing users to watch match/goal highlights from some of the best leagues around the world via Scorebat's API.  Videos are sorted by the top 3 European leagues.  After choosing which league's matches you'd like to view, simply click on the link of the corresponding match and enjoy!
 
 
-#CONTRIBUTOR'S GUIDE, a contributor's guide 
+## Installation
 
-Abcde
+-Check environment file and make sure required gems are present on your machine
+
+-Clone repository
+
+-Run 'bin/run'
 
 
-#LICENSE INFO, a link to the license for your code 
+## Contributing
+
+Bug reports and pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+
+## License
+[MIT](https://opensource.org/licenses/MIT)
