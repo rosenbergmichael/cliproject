@@ -12,7 +12,7 @@ class Videos
     def initialize(match, league, video_link)
         @match = match         
         @league = league
-         @video_link = video_link 
+        @video_link = video_link 
         @@all << self 
          
     end
@@ -21,30 +21,47 @@ class Videos
       @@all 
     end 
 
-    
-    def england_videos
-        #if competition name includes ENGLAND, show list of corresponding title embed 
-        #iframe src links (maybe title and link, so "Wolves - Arsenal" : videolink)
-        
-    end
 
 
-    def spain_videos
-        #if competition name includes SPAIN, show list of corresponding title embed 
-        #iframe src link
-    end
+    def self.show_england_videos
+        @@all.each_with_index do |video, index|
+            if video.league.include? "ENGLAND"
+         puts "#{index + 1}. #{video.match}, #{video.video_link}"
+         # include video links, , #{video.video_link} but only the link?
+            end  
+        end 
+     end 
+ 
 
-    def italy_videos
-        #if competition name includes ITALY, show list of corresponding title embed 
-        #iframe src link
-    end
+     def self.show_spain_videos
+        @@all.each_with_index do |video, index|
+            if video.league.include? "SPAIN"
+         puts "#{index + 1}. #{video.match}"
+         # include video links, , #{video.video_link} but only the link?
+            end  
+        end 
+     end 
 
+
+     def self.show_italy_videos
+        @@all.each_with_index do |video, index|
+            if video.league.include? "ITALY"
+         puts "#{index + 1}. #{video.match}"
+         # include video links, , #{video.video_link} but only the link?
+            end  
+        end 
+     end 
    
 
 end
 
-#FOR VIDEOS.RB FILE :
-#one method is compiling list of all EPL videos 
-#one method is compiling list of all La Liga videos
-#one method is compiling list of all Serie A videos
-#figure out how to extract video link from embed via regex
+
+
+
+#Notes 7/9:
+#matches by countries works, but how can I fix the index numbers
+#so that they start a new index list at 1 vs now they're showing
+#the index numbers from the original list?
+
+#Also, need to figure out how to include the video link after
+

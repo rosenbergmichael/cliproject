@@ -1,5 +1,6 @@
 #everything user sees, also what's talking to primariy class 
 #provide user interface, 'gets' and 'puts' user input
+require 'pry'
 
 class CLI
 
@@ -17,7 +18,7 @@ class CLI
             while menu != "exit"
             end    
         end_program
-        binding.pry
+      #  binding.pry
     end
 
     def greeting
@@ -29,7 +30,9 @@ class CLI
     end
 
     def menu 
+        puts ""
         puts "Please choose one of the following number options: "
+        puts ""
         list_options
         input = gets.strip.downcase
         choose_option(input)
@@ -41,29 +44,28 @@ class CLI
         1. Premier League Videos (England)
         2. La Liga Videos (Spain)
         3. Serie A Videos (Italy)
-            Enter 'exit' to leave program.
         DOC
+        puts ""
+        puts "Enter 'exit' to leave program."
+        
     end
 
     def choose_option(input)
         case input 
         when "1"    
-            puts "Premier League Videos"
-        when "2"    
-            puts "La Liga Videos"
+            Videos.show_england_videos 
+        when "2"   
+            Videos.show_spain_videos 
         when "3"
-             puts "Serie A Videos"    
+            Videos.show_italy_videos    
         end
-        #is this where I would put the videos.rb methods england_videos, spain_videos?
-        #so Videos.england_videos for "1" ?
-        #should return new list per country, with title (Arsenal-Wolves) and link to video
     end
-
+    
 
 end
 
 
-#another menu 
+
 
 
 
