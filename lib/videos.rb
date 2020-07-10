@@ -3,7 +3,7 @@ require_relative "./api.rb"
 
 class Videos
 
-    attr_accessor :match, :league, :video_link
+   attr_accessor :match, :league, :video_link
 
    @@all = []
 
@@ -25,7 +25,7 @@ class Videos
         @@all.each do |video|
             if video.league.include? "ENGLAND"
          puts "#{num += 1}. #{video.match}, #{video.video_link}"
-           end  
+            end  
         end 
      end 
  
@@ -35,7 +35,7 @@ class Videos
         @@all.each do |video|
             if video.league.include? "SPAIN"
             puts "#{num += 1}. #{video.match}, #{video.video_link}"
-           end  
+            end  
         end 
      end 
 
