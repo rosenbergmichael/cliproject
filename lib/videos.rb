@@ -1,6 +1,3 @@
-require "pry"
-require_relative "./api.rb"
-
 class Videos
 
    attr_accessor :match, :league, :video_link
@@ -21,33 +18,19 @@ class Videos
 
 
     def self.show_england_videos
-        num = 0
-        @@all.each do |video|
-            if video.league.include? "ENGLAND"
-         puts "#{num += 1}. #{video.match}, #{video.video_link}"
-            end  
-        end 
-     end 
+        @@all.select { |n| n.league.include? "ENGLAND" }
+    end 
  
 
      def self.show_spain_videos
-        num = 0
-        @@all.each do |video|
-            if video.league.include? "SPAIN"
-            puts "#{num += 1}. #{video.match}, #{video.video_link}"
-            end  
-        end 
+        @@all.select { |n| n.league.include? "SPAIN" } 
      end 
 
 
      def self.show_italy_videos
-        num = 0
-        @@all.each do |video|
-            if video.league.include? "ITALY"
-            puts "#{num += 1}. #{video.match}, #{video.video_link}"
-            end  
-        end 
-     end 
+        @@all.select { |n| n.league.include? "ITALY" } 
+     end
 
+    
 end
 

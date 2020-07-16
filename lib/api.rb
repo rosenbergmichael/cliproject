@@ -1,7 +1,3 @@
-require "httparty"
-require "pry"
-require_relative "./videos.rb"
-
 class API 
   
     def get_api 

@@ -2,8 +2,7 @@
 
 require_relative '../config/environment'
 
-new_cli_instance = CLI.new
-new_cli_instance.welcome_menu
+CLI.new.welcome_menu
 
 
 

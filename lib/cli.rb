@@ -57,17 +57,29 @@ class CLI
             puts "" 
             puts "Click a link to watch that game's highlights!  Or enter a number 1-3 to view a different league."
             puts ""
-            Videos.show_england_videos 
+            num = 0
+            x = Videos.show_england_videos 
+            x.each do |video|
+            puts "#{num += 1}. #{video.match}, #{video.video_link}"
+            end 
         when "2"   
             puts "" 
             puts "Click a link to watch that game's highlights!  Or enter a number 1-3 to view a different league."
             puts ""
-            Videos.show_spain_videos 
+            num = 0
+            x = Videos.show_spain_videos 
+            x.each do |video|
+            puts "#{num += 1}. #{video.match}, #{video.video_link}"
+            end    
         when "3"
             puts "" 
             puts "Click a link to watch that game's highlights!  Or enter a number 1-3 to view a different league."
             puts ""
-            Videos.show_italy_videos    
+            num = 0
+            x = Videos.show_italy_videos  
+            x.each do |video|
+            puts "#{num += 1}. #{video.match}, #{video.video_link}"
+            end 
         end
     end
 
