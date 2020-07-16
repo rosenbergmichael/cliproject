@@ -18,19 +18,22 @@ class Videos
 
 
     def self.show_england_videos
-        @@all.select { |n| n.league.include? "ENGLAND" }
+      Videos.organize.select { |n| n.league.include? "ENGLAND" }
     end 
  
 
      def self.show_spain_videos
-        @@all.select { |n| n.league.include? "SPAIN" } 
+        Videos.organize.select { |n| n.league.include? "SPAIN" } 
      end 
 
 
      def self.show_italy_videos
-        @@all.select { |n| n.league.include? "ITALY" } 
+        Videos.organize.select { |n| n.league.include? "ITALY" } 
      end
 
+     def self.organize
+      @@all.sort {|a, b| a.match <=> b.match}
+     end
     
 end
 
